@@ -1,18 +1,18 @@
 {
-  "author": "ryuko",
-  "language": "english",
-  "allowinbox": false,
+  "author": "tkdev",
+  "language": "vn",
+  "allowinbox": true,
   "adminonly": false,
-  "autocreatedb": true,
+  "autocreatedb": false,
   "approval": false,
-  "premium": false,
-  "email": "sanjivfesh@gmail.com",
-  "adminpass": "ryukodev",
+  "premium": true,
+  "email": "khanhshado14@gmail.com",
+  "adminpass": "projectbot",
   "operators": [
-    "100091459940475"
+    "100090458979503"
   ],
   "autorestart": {
-    "status": false,
+    "status": true,
     "time": 40,
     "note": "the system is automatically restarts in 40 minutes"
   },
@@ -21,16 +21,16 @@
   "disabledcmds": [],
   "disabledevnts": [],
   "loginoptions": {
-    "selfListen": false,
+    "selfListen": true,
     "selfListenEvent": true,
     "listenEvents": true,
     "listenTyping": false,
     "updatePresence": false,
-    "forceLogin": false,
+    "forceLogin": true,
     "autoMarkDelivery": false,
-    "autoMarkRead": false,
+    "autoMarkRead": true,
     "autoReconnect": true,
-    "online": false,
+    "online": true,
     "emitReady": false,
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:132.0) Gecko/20100101 Firefox/132.0"
   },
