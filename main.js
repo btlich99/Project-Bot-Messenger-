@@ -16,7 +16,7 @@ const process = require('process');
 const moment = require("moment-timezone");
 const express = require("express");
 const app = express();
-const port = 8090 || 9000 || 5555 || 5050 || 5000 || 3003 || 2000 || 1029 || 1010;
+const port = 3333 || 8090 || 9000 || 5555 || 5050 || 5000 || 3003 || 2000 || 1029 || 1010;
 
 global.client = new Object({
     commands: new Map(),
@@ -59,9 +59,9 @@ global.editBots = require("./main/system/editconfig.js");
 app.use(express.json());
 app.use(express.static('main/webpage'));
 console.clear();
-console.log(chalk.blue('LOADING MAIN SYSTEM'));
+console.log(chalk.blue('=== LOADING MAIN SYSTEM ==='));
 app.listen(port, () => {
-    logger(`listen on port ${chalk.blueBright(port)}`);
+    logger(`Listen on port ${chalk.blueBright(port)}`);
 });
 
 var configValue;
@@ -71,14 +71,14 @@ try {
     configValue = require(global.client.configPath);
     log(`loading ${chalk.blueBright(`config`)} file.`, "load");
 } catch (err) {
-    return log(`cant load ${chalk.blueBright(`configPath`)} in client.`, "error");
+    return log(`Cant load ${chalk.blueBright(`configPath`)} in client.`, "error");
     process.exit(0);
 }
 try {
     for (const Keys in configValue) global.config[Keys] = configValue[Keys];
-    log(`loaded ${chalk.blueBright(`config`)} file.`, "load");
+    log(`Loaded ${chalk.blueBright(`config`)} file.`, "load");
 } catch (err) {
-    return log(`can't load ${chalk.blueBright(`config`)} file.`, "error");
+    return log(`Can't load ${chalk.blueBright(`config`)} file.`, "error");
     process.exit(0)
 }
 
