@@ -15,14 +15,14 @@ function startBot(message) {
     });
   child.on("close", (codeExit) => {
         if (codeExit != 0 || global.countRestart && global.countRestart < 5) {
-            startBot("restarting server");
+            startBot("Restarting server");
             global.countRestart += 1;
             return;
         } else return;
     });
 
   child.on("error", function(error) {
-    logger("an error occurred : " + JSON.stringify(error), "error");
+    logger("An error occurred : " + JSON.stringify(error), "error");
   });
 };
 startBot();
