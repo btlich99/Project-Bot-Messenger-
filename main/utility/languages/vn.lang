@@ -43,34 +43,34 @@ main.data3=Bạn đang dùng bản Premium Project
 # includes/listen.js
 
 listen.startLoadEnvironment=Tiến hành tải biến môi trường .
-listen.loadedEnvironmentThread=Đã tải biến môi trường luồng thành công 
-listen.loadedEnvironmentUser=Đã tải thành công biến môi trường người dùng
-listen.successLoadEnvironment=Loaded environment variable successfully 
-listen.failLoadEnvironment=Can't load environment variable, error : %1
+listen.loadedEnvironmentThread=Đã tải thành công biến môi trường nhóm
+listen.loadedEnvironmentUser=Đã tải thành công biến môi trường người dùng 
+listen.successLoadEnvironment=Đã tải biến môi trường thành công 
+listen.failLoadEnvironment=Không thể tải biến môi trường, lỗi : %1
 
 # includes/controller/currencies.js
 
-currencies.needObjectOrArray=Have to be an array or an object or maybe both.
-currencies.needObject=Have to be an object.
-currencies.needNumber=Have to be an number.
+currencies.needObjectOrArray=Phải là một mảng hoặc một đối tượng hoặc có thể là cả hai.
+currencies.needObject=Phải là một đối tượng.
+currencies.needNumber=Phải là một con số.
 
 # includes/controller/threads.js
 
-threads.needObjectOrArray=Have to be an Array or an Object or maybe both
-threads.needObject=Have to be an Object 
+threads.needObjectOrArray=Phải là một Mảng hoặc một Đối tượng hoặc có thể là cả hai
+threads.needObject=Phải là một Đối tượng 
 
 # includes/controller/users.js
 
-users.needObjectOrArray=Have to be an Array or an Object or maybe both
-users.needObject=Have to be an Object
+users.needObjectOrArray=Phải là một Mảng hoặc một Đối tượng hoặc có thể là cả hai
+users.needObject=Phải là một Đối tượng
 
 # includes/handle/handleCommand.js
 
-handleCommand.userBanned=You are unable to use bot.
-handleCommand.threadBanned=Your thread are unable to use bot.
-handleCommand.commandNotExist=Lệnh bạn sử dụng không tồn tại!\n> Lệnh gần giống là: "%1".
-handleCommand.commandThreadBanned=Your thread is unable to use command "%1".
-handleCommand.commandUserBanned=You are unable to use command "%1".
+handleCommand.userBanned=Bạn đã bị cấm sử dụng Bot\n📌 - Liên hệ FB: fb.com/KhanhShado.Vip
+handleCommand.threadBanned=Nhóm này đã bị cấm sử dụng Bot\n📌 - Liên hệ FB: fb.com/KhanhShado.Vip.
+handleCommand.commandNotExist=Lệnh bạn sử dụng không tồn tại!\n📌 Lệnh gần giống là: "%1"\n⏰ Uptime: 
+handleCommand.commandThreadBanned=Nhóm này đã bị cấm sử dụng lệnh "%1".
+handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1".
 handleCommand.threadNotAllowNSFW=Your thread is not allowed to use NSFW commands.
 handleCommand.cantGetInfoThread=Can't get your thread's info, error: %1
 handleCommand.permissionNotEnough=You have no permission to use command "%1"
