@@ -12,6 +12,7 @@ module.exports.config = {
     category: "Admin",
     usages: "[reply or text]",
     cooldowns: 0,
+    prefix: false,
     dependencies: {
         "pastebin-api": "",
         "cheerio": "",
