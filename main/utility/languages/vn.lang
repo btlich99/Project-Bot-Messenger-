@@ -9,8 +9,8 @@ main.accountload=Loaded  %1 data.
 main.loadedacc=Loaded %1 acc.
 main.accounterr=Không thể tải %1, lỗi: %2.
 main.emailNotfound=Vui lòng nhập email vào file %1.
-main.startloadCmd=\n=== Loading Commands ===
-main.startloadEvnt==== Loading Events ===
+main.startloadCmd=\n=== LOADING COMMANDS ===
+main.startloadEvnt==== LOADING EVENTS ===
 main.cmdNameErr=Lệnh %1 thiếu tên
 main.cmdCategoryErr=Lệnh %1 thiếu nhóm lệnh
 main.premiumCmdErr=Lệnh %1 thiếu Premium Cmd
@@ -20,16 +20,16 @@ main.failedEvnt=Không thể tải %1 events
 main.evNameExist=Đã tải thành công %1 events
 
 main.successLogin=Đăng nhập thành công
-main.loadingLogin==== Loading Login Account ===
+main.loadingLogin==== LOADING LOGIN ACCOUNT ===
 main.appstateEmpty=File appstate trống
 main.loggingIn=Tiến hành đăng nhập tài khoản
 main.loginErr=Appstate đã xảy ra lỗi, %2
 main.loginErrencounter=an error encountered during login session, please check your console.
 main.loadingDatabase==== Loading Database ===
 main.databaseLoaded=Đã tải thành công Database 
-main.data1=This bot was made by ryuko, modified by tkdev, do not change author
+main.data1=This bot was modified by tkdev, do not change credit
 main.cantDeployData=Không thể tải file Database, lỗi %1
-main.updateSystem=\n=== Loading Deploying Update ===
+main.updateSystem=\n=== LOADING DEPLOYING UPDATE ===
 main.checkUpdate=Đang kiểm tra bản cập nhật%1
 main.errorUpdate=Không thể tải %1, lỗi : %2
 main.loadingUpdate=Bạn đang dùng phiên bản mới nhất
@@ -37,14 +37,14 @@ main.loadedUpdate=Tải thành công bản cập nhật mới nhất
 main.noFoundUpdates=Không tìm thấy bản cập nhật mới nào
 main.errUpdateCheck=Không thể kiểm tra bản cập nhật, lỗi : %1
 main.data2=encountered an error? please contact me in facebook : www.facebook.com/profile/khanhshado.vip
-main.data3=Bạn đang dùng bản Premium 
+main.data3=Bạn đang dùng bản Premium Project 
     
 
 # includes/listen.js
 
-listen.startLoadEnvironment=Proceed to load the environment variable.
-listen.loadedEnvironmentThread=Loaded thread environment variable successfully 
-listen.loadedEnvironmentUser=Loaded user environment variable successfully 
+listen.startLoadEnvironment=Tiến hành tải biến môi trường .
+listen.loadedEnvironmentThread=Đã tải biến môi trường luồng thành công 
+listen.loadedEnvironmentUser=Đã tải thành công biến môi trường người dùng
 listen.successLoadEnvironment=Loaded environment variable successfully 
 listen.failLoadEnvironment=Can't load environment variable, error : %1
 
