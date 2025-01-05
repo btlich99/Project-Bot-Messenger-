@@ -4,7 +4,7 @@ module.exports.config = {
   permission: 0,
   credits: "ryuko",
   description: "beginner's guide",
-  prefix: true,
+  prefix: false,
   premium: false,
   category: "guide",
   usages: "[Shows Commands]",
@@ -29,6 +29,15 @@ module.exports.languages = {
     user: "user",
     adminGroup: "group admin",
     adminBot: "bot admin",
+  },
+  vietnam: {
+    moduleInfo:
+      "%1\n%2\n\nUsage : %3\nCategory : %4\ncooldowns : %5 seconds(s)\nPermission : %6\n\n> Module code by %7 <",
+    helpList:
+      `Có %1 lệnh và %2 nhóm lệnh`,
+    user: "Người dùng",
+    adminGroup: "Nhóm Admin",
+    adminBot: "Admin Bot",
   }
 };
 
