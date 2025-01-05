@@ -6,10 +6,10 @@ const { PasteClient } = require('pastebin-api');
 module.exports.config = {
     name: "adc",
     version: "1.0.0",
-    hasPermssion: 3,
+    permssion: 3,
     credits: "Thjhn",
     description: "adc mọi loại raw",
-    commandCategory: "Admin",
+    category: "Admin",
     usages: "[reply or text]",
     cooldowns: 0,
     dependencies: {
