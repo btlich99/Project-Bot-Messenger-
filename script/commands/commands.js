@@ -1,10 +1,10 @@
 module.exports.config = {
-    name: "command",
+    name: "cmd",
     version: "1.0.0",
     permission: 2,
-    credits: "ryuko",
-    description: "manage/control all bot modules",
-    prefix: true,
+    credits: "tkdev",
+    description: "Manage/control all bot modules",
+    prefix: false,
     premium: false,
     category: "operator",
     usages: "[load/unload/loadAll/unloadAll/info] [command name]",
@@ -17,10 +17,10 @@ module.exports.config = {
 };
 
 const loadCommand = function ({ moduleList, threadID, messageID, getText }) {
-    let operator = global.config.OPERATOR;
-            if (!operator.includes(event.senderID)) return api.sendMessage(`only bot operators can use this command.`, event.threadID, event.messageID);
+    let operator = global.config.operator;
+            if (!operator.includes(event.senderID)) return api.sendMessage(`Cuts`, event.threadID, event.messageID);
     const { execSync } = global.nodemodule['child_process'];
-    const { writeFileSync, unlinkSync, readFileSync } = global.nodemodule['fs-extra'];
+    const { writeFileSync, unlinkSync, readFileSync } = require('fs-extra');
     const { join } = global.nodemodule['path'];
     const { configPath, mainPath, api } = global.client;
     const logger = require(mainPath + '/ryukoc.js');
