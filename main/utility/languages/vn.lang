@@ -71,44 +71,44 @@ handleCommand.threadBanned=Nhóm này đã bị cấm sử dụng Bot\n📌 - Li
 handleCommand.commandNotExist=Lệnh bạn sử dụng không tồn tại!\n📌 Lệnh gần giống là: "%1"\n⏰ Uptime: 
 handleCommand.commandThreadBanned=Nhóm này đã bị cấm sử dụng lệnh "%1".
 handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1".
-handleCommand.threadNotAllowNSFW=Your thread is not allowed to use NSFW commands.
-handleCommand.cantGetInfoThread=Can't get your thread's info, error: %1
-handleCommand.permissionNotEnough=You have no permission to use command "%1"
-handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
-handleCommand.executeCommand=\nTime and date : %1\ncommand used : %2\nuser id : %3\ngroup id : %4\nargs included : %5\nprocessing time : %6ms
-handleCommand.commandError=Having some unexpected error when using command %1, error : %2.
-handleCommand.notMatched=This command does not require a prefix to start with.
-handleCommand.noPrefix=This command has no command config "usePrefix" property
-handleCommand.commandNotFound=The command you used doesn't exist.
+handleCommand.threadNotAllowNSFW=Sex ít thôi.
+handleCommand.cantGetInfoThread=Không thể lấy thông tin nhóm của bạn, lỗi: %1
+handleCommand.permissionNotEnough=Bạn đéo có quyền được dùng lệnh: "%1"\n☘️ Chỉ Admin hoặc Quản Trị Viên nhóm được sử dụng!
+handleCommand.cantSetMessageReaction=Có một số lỗi bất ngờ tại setMessageReaction, lỗi: %1
+handleCommand.executeCommand=\nThời gian và ngày tháng : %1\nLệnh được sử dụng : %2\nUID : %3\nGID : %4\nCác đối số được bao gồm : %5\nThời gian xử lý : %6ms
+handleCommand.commandError=Có một số lỗi không mong muốn khi sử dụng lệnh %1, lỗi : %2.
+handleCommand.notMatched=Lệnh này không yêu cầu "%1%2".
+handleCommand.noPrefix=Lệnh này không có "usePrefix"
+handleCommand.commandNotFound=Lệnh bạn sử dụng không tồn tại.
 
 # includes/handle/handleCommandEvent.js
 
-handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2.
+handleCommandEvent.moduleError=Có một số lỗi không mong muốn khi sử dụng lệnh %1, lỗi: %2.
 
 # includes/handle/handleCreateDatabase.js
 
-handleCreateDatabase.newThread=\nBot - new group detected %1.
-handleCreateDatabase.newUser=\nBot - new user detected %1.
+handleCreateDatabase.newThread=\nShadow - Nhóm mới %1.
+handleCreateDatabase.newUser=\nShadow - Người dùng mới  %1.
 
 # includes/handle/handleEvent.js
 
-handleEvent.executeEvent=\nTime and date : %1\nexecuted event : %2\ngroup id : %3\nprocessing time : %4ms
-handleEvent.eventError=Having some error when executing event %1, error: %2.
+handleEvent.executeEvent=\nThời gian và ngày tháng : %1\nUID : %2\nGID %3\nThời gian xử lý : %4ms
+handleEvent.eventError=Có một số lỗi khi thực hiện events %1, lỗi: %2.
 
 # includes/handle/handleReaction.js
 
-handleReaction.missingValue=Missing value to respond your problem.
-handleReaction.executeError=Having some error when responding your problem, error: %1.
+handleReaction.missingValue=Thiếu giá trị để trả lời vấn đề của bạn.
+handleReaction.executeError=Có một số lỗi khi trả lời vấn đề của bạn, lỗi: %1.
 
 # includes/handle/handleReply.js
 
-handleReply.missingValue=Missing value to respond your problem.
-handleReply.executeError=Having some error when responding your problem, error: %1.
+handleReply.missingValue=Thiếu giá trị để trả lời vấn đề của bạn.
+handleReply.executeError=Having một số lỗi khi trả lời vấn đề của bạn, lỗi: %1.
 
 # includes/handle/handleSchedule.js
 
-handleSchedule.exectuteError=Having some error when schedule at module %1, error : %2.
+handleSchedule.exectuteError=Có một số lỗi khi lên lịch tại module %1, lỗi : %2.
 
 # utils/index.js
 
-utils.throwError=Bạn đã nhập sai cú pháp của lệnh %2\nHãy dùng %1help %2 
+utils.throwError=Bạn đã dùng sai cú pháp của lệnh %2\nHãy dùng %1help %2 
