@@ -1,11 +1,11 @@
 module.exports.config = {
   name: "out",
   version: "1.0.0",
-  hasPermssion: 3,
+  permssion: 2,
   Rent: 2,
-  credits: "ChatGpt",
+  credits: "tkdev",
   description: "out box",
-  commandCategory: "Admin-Hệ Thống",
+  category: "Admin-Hệ Thống",
   usages: "[tid]",
   cooldowns: 3
 };
