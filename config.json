@@ -5,7 +5,7 @@
   "adminonly": false,
   "autocreatedb": false,
   "approval": false,
-  "premium": true,
+  "premium": false,
   "email": "khanhshado14@gmail.com",
   "adminpass": "projectbot",
   "operators": [
