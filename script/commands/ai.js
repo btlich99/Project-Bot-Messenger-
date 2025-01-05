@@ -1,12 +1,12 @@
 module.exports.config = {
-  name: `ai`,
+  name: "ai",
   version: "1.1.0",
   permission: 0,
-  credits: "ryuko",
-  description: "",
+  credits: "tkdev",
+  description: "Herc.Ai",
   prefix: false,
   premium: true,
-  category: "without prefix",
+  category: "Without prefix",
   usage: `ai (question)`,
   cooldowns: 3,
   dependencies: {
@@ -17,7 +17,7 @@ module.exports.config = {
 module.exports.run = async function({api, event, args}) {
   const message = args.join(" ");
   if (!message) {
-    return api.sendMessage('please provide a question');
+    return api.sendMessage('Thiếu câu hỏi!');
   }
 const { Hercai } = require('hercai');
 const herc = new Hercai();
