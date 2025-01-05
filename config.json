@@ -11,6 +11,7 @@
   "operators": [
     "100090458979503"
   ],
+  "prefix": ".",
   "autorestart": {
     "status": true,
     "time": 40,
