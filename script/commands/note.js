@@ -5,10 +5,10 @@ module.exports = {
  config: {
  name: 'note',
  version: '0.0.1',
- hasPermssion: 3,
+ permssion: 2,
  credits: 'DC-Nam',
  description: 'https://niiozic.site/note/:UUID',
- commandCategory: 'Admin',
+ category: 'Admin',
  usages: '[]',
  prefix: false,
  cooldowns: 3,
