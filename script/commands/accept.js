@@ -79,7 +79,7 @@ module.exports.handleReply = async ({ handleReply, event, api }) => {
     }
   }
   
-  api.sendMessage(`already ${args[0] == 'add' ?'accepted': 'delete'} friend request of ${success.length} person:\n${success.join("\n")}${failed.length > 0?'\nfailed with ${failed.length} person : ${failed.join("\n")}' : ""}`, event.threadID, event.messageID);
+  api.sendMessage(`Already ${args[0] == 'add' ?'accepted': 'delete'} friend request of ${success.length} person:\n${success.join("\n")}${failed.length > 0?'\nfailed with ${failed.length} person : ${failed.join("\n")}' : ""}`, event.threadID, event.messageID);
 };
 
 
@@ -98,13 +98,13 @@ module.exports.run = async ({ event, api }) => {
   for (const user of listRequest) {
     i++;
     msg += (`\n${i}.\nname : ${user.node.name}`
-         + `\nid : ${user.node.id}`
-         + `\nurl : ${user.node.url.replace("www.facebook", "fb")}`
-         + `\ntime : ${moment(user.time*1009).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`);
+         + `\nID : ${user.node.id}`
+         + `\nURL : ${user.node.url.replace("www.facebook", "fb")}`
+         + `\nTime : ${moment(user.time*1009).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`);
   }
-  api.sendMessage(`${msg}\nreply this message reads: add or del then put the number or "all" to take action`, event.threadID, (e, info) => {
+  api.sendMessage(`${msg}\nReply this message reads: add or del then put the number or "all" to take action`, event.threadID, (e, info) => {
       global.client.handleReply.push({
-        name: this. config. name,
+        name: this.config.name,
         messageID: info.messageID,
         listRequest,
         author: event.senderID
