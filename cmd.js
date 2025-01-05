@@ -19,11 +19,11 @@ module.exports.config = {
 const loadCommand = function ({ moduleList, threadID, messageID, getText }) {
     let operator = global.config.operator;
             if (!operator.includes(event.senderID)) return api.sendMessage(`Cuts`, event.threadID, event.messageID);
-    const { execSync } = global.nodemodule['child_process'];
+    const { execSync } = require('child_process');
     const { writeFileSync, unlinkSync, readFileSync } = require('fs-extra');
-    const { join } = global.nodemodule['path'];
+    const { join } = require('path');
     const { configPath, mainPath, api } = global.client;
-    const logger = require(mainPath + '/ryukoc.js');
+    const logger = require(mainPath + '/logs.js');
 
     var errorList = [];
     delete require['resolve'][require['resolve'](configPath)];
@@ -108,7 +108,7 @@ const loadCommand = function ({ moduleList, threadID, messageID, getText }) {
         };
     }
     if (errorList.length != 0) api.sendMessage('modules that had problems loading : ' + errorList.join(' '), threadID, messageID);
-    api.sendMessage('loaded ' + (moduleList.length - errorList.length) + ' module.', threadID, messageID) 
+    api.sendMessage('Loaded ' + (moduleList.length - errorList.length) + ' module.', threadID, messageID) 
     writeFileSync(configPath, JSON.stringify(configValue, null, 4), 'utf8')
     unlinkSync(configPath + '.temp');
     return;
@@ -117,7 +117,7 @@ const loadCommand = function ({ moduleList, threadID, messageID, getText }) {
 const unloadModule = function ({ moduleList, threadID, messageID }) {
     const { writeFileSync, unlinkSync } = global.nodemodule["fs-extra"];
     const { configPath, mainPath, api } = global.client;
-    const logger = require(mainPath + "/ryukoc.js").loader;
+    const logger = require(mainPath + "/logs.js").loader;
 
     delete require.cache[require.resolve(configPath)];
     var configValue = require(configPath);
@@ -134,21 +134,21 @@ const unloadModule = function ({ moduleList, threadID, messageID }) {
     writeFileSync(configPath, JSON.stringify(configValue, null, 4), 'utf8');
     unlinkSync(configPath + ".temp");
 
-    return api.sendMessage(`unloaded ${moduleList.length} module`, threadID, messageID);
+    return api.sendMessage(`Unloaded ${moduleList.length} module`, threadID, messageID);
 }
 
 module.exports.run = function ({ event, args, api }) {
-    const { readdirSync } = global.nodemodule["fs-extra"];
+    const { readdirSync } = require!"fs-extra");
     const { threadID, messageID } = event;
 
     var moduleList = args.splice(1, args.length);
 
     switch (args[0]) {
-        case "load": {
+        case "l": {
             if (moduleList.length == 0) return api.sendMessage("module name cannot be empty.", threadID, messageID);
             else return loadCommand({ moduleList, threadID, messageID });
         }
-        case "unload": {
+        case "u": {
             if (moduleList.length == 0) return api.sendMessage("module name cannot be empty.", threadID, messageID);
             else return unloadModule({ moduleList, threadID, messageID });
         }
