@@ -2,7 +2,7 @@ const fs = require('fs');
 const request = require('request');
 
 module.exports.config = {
-    name: "adminnoti",
+    name: "anoti",
     version: "1.0.0",
     permission: 2,
     credits: "ryuko",
@@ -43,13 +43,13 @@ const getAtm = (atm, body) => new Promise(async (resolve) => {
 module.exports.handleReply = async function ({ api, event, handleReply, Users, Threads, getText }) {
     
     const moment = require("moment-timezone");
-      var gio = moment.tz("Asia/Manila").format("DD/MM/YYYY - HH:mm:s");
+      var gio = moment.tz("Asia/ho_chi_minh").format("DD/MM/YYYY - HH:mm:ss");
     const { threadID, messageID, senderID, body } = event;
     let name = await Users.getNameUser(senderID);
     switch (handleReply.type) {
         case "sendnoti": {
-            let text = `${name} replied to your announce\n\ntime : ${gio}\nreply : ${body}\n\nfrom group : ${(await Threads.getInfo(threadID)).threadName || "unknown"}`;
-            if(event.attachments.length > 0) text = await getAtm(event.attachments, `${body}${name} replied to your announce\n\ntime : ${gio}\n\nfrom group : ${(await Threads.getInfo(threadID)).threadName || "unknown"}`);
+            let text = `${name} đã trả lời thông báo của bạn\n\nTime : ${gio}\nNội dung : ${body}\n\nNhóm : ${(await Threads.getInfo(threadID)).threadName || "unknown"}`;
+            if(event.attachments.length > 0) text = await getAtm(event.attachments, `${body}${name} đã trả lời thông báo của bạn\n\ntime : ${gio}\n\nĐến : ${(await Threads.getInfo(threadID)).threadName || "unknown"}`);
             api.sendMessage(text, handleReply.threadID, (err, info) => {
                 atmDir.forEach(each => fs.unlinkSync(each))
                 atmDir = [];
@@ -64,8 +64,8 @@ module.exports.handleReply = async function ({ api, event, handleReply, Users, T
             break;
         }
         case "reply": {
-            let text = `admin ${name} replied to you\n\nreply : ${body}\n\nreply to this message if you want to respond again.`;
-            if(event.attachments.length > 0) text = await getAtm(event.attachments, `${body}${name} replied to you\n\nreply to this message if you want to respond again.`);
+            let text = `Admin ${name} Reply đến bạn\n\nNội dung : ${body}\n\nReply tin nhắn này để gửi lại cho admin.`;
+            if(event.attachments.length > 0) text = await getAtm(event.attachments, `${body}${name} reply đến bạn\n\nreply to this message if you want to respond again.`);
             api.sendMessage(text, handleReply.threadID, (err, info) => {
                 atmDir.forEach(each => fs.unlinkSync(each))
                 atmDir = [];
@@ -83,12 +83,12 @@ module.exports.handleReply = async function ({ api, event, handleReply, Users, T
 
 module.exports.run = async function ({ api, event, args, Users }) {
     const moment = require("moment-timezone");
-      var gio = moment.tz("Asia/Manila").format("DD/MM/YYYY - HH:mm:s");
+      var gio = moment.tz("Asia/ho_chi_minh").format("DD/MM/YYYY - HH:mm:ss");
     const { threadID, messageID, senderID, messageReply } = event;
-    if (!args[0]) return api.sendMessage("please input message", threadID);
+    if (!args[0]) return api.sendMessage("Vui lòng nhập nội dung", threadID);
     let allThread = global.data.allThreadID || [];
     let can = 0, canNot = 0;
-    let text = `message from admins\n\ntime : ${gio}\nadmin name : ${await Users.getNameUser(senderID)}\nmessage : ${args.join(" ")}\n\nreply to this message if you want to respond from this announce.`;
+    let text = `Tin nhắn từ Admin\n\nTime : ${gio}\nName : ${await Users.getNameUser(senderID)}\nNội dung : ${args.join(" ")}\n\nReply tin nhắn này để phản hồi lại admin.`;
     if(event.type == "message_reply") text = await getAtm(messageReply.attachments, `message from admins\n\ntime : ${gio}\nadmin name : ${await Users.getNameUser(senderID)}\nmessage : ${args.join(" ")}\n\nreply to this message if you want to respond from this announce.`);
     await new Promise(resolve => {
         allThread.forEach((each) => {
