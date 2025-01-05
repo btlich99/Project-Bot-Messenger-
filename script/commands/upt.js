@@ -6,10 +6,10 @@ const fs = require('fs').promises;
 module.exports.config = {
   name: "zupt",
   version: "1.0.2",
-  hasPermssion: 0,
+  permssion: 0,
   credits: "DuyVuong, mod by Eien Mojiki",
   description: "uptime bot",
-  commandCategory: "Hệ thống",
+  category: "Hệ thống",
   cooldowns: 3,
   prefix: false
 };
