@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryuko V5</title>
+    <title>Autobot Free</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -321,19 +321,19 @@
 </head>
 <body>
     <div class="header">
-        <div class="header-text">RYUKO V5</div>
+        <div class="header-text">Autobot Free</div>
         <div class="robot-icon"></div>
     </div>
 
     <div class="container">
         <div class="home-container">
             <h4>LOGGED IN AS ADMINISTRATOR</h4>
-        <p>configure your bot, using admin panel. </br></br>this project involving facebook messenger bots is solely for educational purposes. the bot's functionality is limited and may not be suitable for real-world applications. Any information or interactions with the bot should not be considered professional advice or a substitute for human interaction.</br></br></br>This project is strictly for educational purposes. It does not involve any hacking or other malicious online activities. </p>
+        <p>Configure your bot, using admin panel. </br></br>This project involving facebook messenger bots is solely for educational purposes. the bot's functionality is limited and may not be suitable for real-world applications. Any information or interactions with the bot should not be considered professional advice or a substitute for human interaction.</br></br></br>This project is strictly for educational purposes. It does not involve any hacking or other malicious online activities. </p>
         <p></p>
         
         </div>
         <br>
-        <strong>designed by jay mar (heru)</strong>
+        <strong>Designed by TKDEV</strong>
         <div class="tab">
             <div class="tab-container">
                 <button class="tablinks active" onclick="openTab(event, 'Create')">APPSTATE</button>
@@ -347,8 +347,8 @@
             <p>
                botpack - Yan Maglinte</br>
                ws3-fca - Kenneth Aceberos</br>
-               mirai - To the owner</br>
-               autobot - To the owner
+               mirai - TKDEV</br>
+               autobot - TKDEV
             </p>
             </div>
             <div class="create-container">
@@ -360,14 +360,14 @@
         </div>
         <div id="Config" class="tabcontent">
                <div class="email-container">
-                   <p>edit email
-                   <input type="text" id="email" placeholder="example@whatever.com">
+                   <p>Edit Email
+                   <input type="text" id="email" placeholder="example@gmail.com">
                    <button onclick="editEmail()">edit</button>
                    </p>
                </div>
                <div class="operator-container">
-                   <p>add operator
-                   <input type="text" id="operator" placeholder="facebook uid">
+                   <p>Add Operator
+                   <input type="text" id="operator" placeholder="Facebook User ID">
                    <button onclick="addOperator()">add</button>
                    </p>
                </div>
@@ -377,11 +377,11 @@
         <div id="Create" class="tabcontent active">
             <h3></h3>
             <div class="create-container">
-                <p>filename 
+                <p>Filename 
         <input type="text" id="fileName" placeholder="ex: ryuko" required>
         </p>
-                <p>appstate 
-        <textarea id="appState" type="appState" rows="10" placeholder="paste your appstate here"></textarea>
+                <p>Enter Appstate 
+        <textarea id="appState" type="appState" rows="10" placeholder="Paste your appstate here"></textarea>
         
 
         <button onclick="createFile()">create</button>
@@ -392,7 +392,7 @@
     </div>
 
     <footer>
-        Made with Ryuko
+        Made with TKDEV
     </footer>
 
     <script>
@@ -444,7 +444,7 @@
          
          function updateTimer(userCard, currentTime) {
              const uptimeUser = userCard.querySelector('.uptime-user');
-             uptimeUser.textContent = `uptime : ${timeFormat(currentTime)}`;
+             uptimeUser.textContent = `Uptime : ${timeFormat(currentTime)}`;
          }
          
         function timeFormat(currentTime) {
@@ -523,8 +523,8 @@
             if (!Operator) {
                 Swal.fire({
                     icon: 'error',
-                    title: 'facebook id is required',
-                    text: 'Please enter your facebook id to continue.',
+                    title: 'Facebook ID is required',
+                    text: 'Please enter your Facebook ID to continue.',
                     confirmButtonColor: '#4CAF50'
                 });
                 return;
@@ -548,7 +548,7 @@
                    Swal.fire({
                     icon: 'success',
                     title: 'Added operator successfully',
-                    text: 'restart your bot using "restart" command to apply changes',
+                    text: 'Restart your bot using "restart" command to apply changes',
                     confirmButtonColor: '#4CAF50'
                 }).then(() => {
                     window.location.href = "#";
@@ -618,7 +618,7 @@ Swal.fire({
 Swal.fire({
                     icon: 'success',
                     title: 'Created appstate successfully',
-                    text: 'restarting system please wait..',
+                    text: 'Restarting system please wait..',
                     confirmButtonColor: '#4CAF50',
                     timer: 1500
                 }).then(() => {
