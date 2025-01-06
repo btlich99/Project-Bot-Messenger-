@@ -1,21 +1,20 @@
 {
   "author": "tkdev",
-  "language": "vn",
+  "language": "english",
   "allowinbox": true,
   "adminonly": false,
   "autocreatedb": false,
   "approval": false,
   "premium": false,
   "email": "khanhshado14@gmail.com",
-  "adminpass": "projectbot",
+  "adminpass": "tkdev",
   "operators": [
-    "100090458979503"
+    ""
   ],
-  "prefix": ".",
   "autorestart": {
     "status": true,
-    "time": 40,
-    "note": "the system is automatically restarts in 40 minutes"
+    "time": 40, 
+    "note": "The system is automatically restarts in 40 minutes"
   },
   "haspremiumcmd": [],
   "approvedgroups": [],
