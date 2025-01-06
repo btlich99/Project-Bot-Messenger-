@@ -21,8 +21,8 @@ module.exports.addUser = async (name, userID) => {
     configBots.push({    
       "name": name,
       "uid": userID,
-      "botname": "ryuko",
-      "prefix": "-",
+      "botname": "TKDEV",
+      "prefix": "/",
       "admins": [],
       "time": 0
     });
